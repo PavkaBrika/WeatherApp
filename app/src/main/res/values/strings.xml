@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WeatherAppCA</string>
+    <string name="cityEditText">Enter your city</string>
+    <string name="setCityButton">Set City</string>
 </resources>
