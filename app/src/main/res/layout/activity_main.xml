@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".presentation.activity.MainActivity">
 
     <EditText
         android:id="@+id/cityEditText"
@@ -17,10 +17,10 @@
         android:id="@+id/buttonSetCity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/setCityButton"
         android:layout_below="@id/cityEditText"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp" />
+        android:layout_marginRight="16dp"
+        android:text="@string/setCityButton" />
 
     <LinearLayout
         android:id="@+id/cityInfoLayout"
