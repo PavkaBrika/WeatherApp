@@ -1,6 +1,8 @@
 package com.breckneck.weatherappca.di
 
+import com.breckneck.weatherappca.WeatherStorageDatabase
 import com.breckneck.weatherappca.WeatherStorageRemote
+import com.breckneck.weatherappca.database.DatabaseWeatherStorageImpl
 import com.breckneck.weatherappca.remote.RemoteWeatherStorageImpl
 import com.breckneck.weatherappca.remote.WeatherApi
 import com.breckneck.weatherappca.repository.WeatherRepository
@@ -14,11 +16,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 val dataModule = module {
 
+    single<WeatherStorageDatabase> {
+        DatabaseWeatherStorageImpl(context = get())
+    }
+
     single<WeatherStorageRemote> {
         RemoteWeatherStorageImpl(weatherApi = get())
     }
 
     single<WeatherRepository> {
-        WeatherRepositoryImpl(weatherStorageRemote = get())
+        WeatherRepositoryImpl(weatherStorageRemote = get(), weatherStorageDatabase = get())
     }
 }

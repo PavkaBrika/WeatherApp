@@ -1,19 +1,13 @@
 package com.breckneck.weatherappca.entity
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity
-data class WeatherApiResponse(
-    val name: String,
-    val main: Main,
-    val weather: List<ExtraWeather>
-)
-
-data class Main(
-    val temp: Double,
-    val feels_like: Double
-)
-
-data class ExtraWeather(
-    val description: String
-)
+data class Weather(
+    @PrimaryKey
+    var id: Int,
+    val city: String,
+    val degrees: Double,
+    val feelsLike: Double,
+    val weather: String)
