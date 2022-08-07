@@ -1,5 +1,8 @@
 package com.breckneck.weatherappca.entity
 
+import androidx.room.Entity
+
+@Entity
 data class WeatherApiResponse(
     val name: String,
     val main: Main,

@@ -2,4 +2,9 @@
     <string name="app_name">WeatherAppCA</string>
     <string name="cityEditText">Enter your city</string>
     <string name="setCityButton">Set City</string>
+    <string name="city">City</string>
+    <string name="temperature">Temperature</string>
+    <string name="feelslike">Feels like</string>
+    <string name="weather">Weather</string>
+    <string name="metric">C</string>
 </resources>

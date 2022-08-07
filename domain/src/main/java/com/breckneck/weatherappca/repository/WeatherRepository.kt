@@ -4,6 +4,7 @@ import com.breckneck.weatherappca.model.WeatherDomain
 
 interface WeatherRepository {
 
-    fun getWeather(city: String) : WeatherDomain
+    suspend fun getWeather(city: String) : WeatherDomain
 
+    suspend fun saveWeather(weather: WeatherDomain)
 }

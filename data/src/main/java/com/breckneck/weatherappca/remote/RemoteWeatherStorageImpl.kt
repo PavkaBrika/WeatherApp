@@ -6,7 +6,7 @@ import com.breckneck.weatherappca.entity.WeatherApiResponse
 class RemoteWeatherStorageImpl(private val weatherApi: WeatherApi) : WeatherStorageRemote {
 
 
-    override fun getWeather(city: String): WeatherApiResponse {
+    override suspend fun getWeather(city: String): WeatherApiResponse {
         return weatherApi.getWeather(city = city)
     }
 

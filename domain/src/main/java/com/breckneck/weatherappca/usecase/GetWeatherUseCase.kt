@@ -5,7 +5,7 @@ import com.breckneck.weatherappca.repository.WeatherRepository
 
 class GetWeatherUseCase(private val weatherRepository: WeatherRepository) {
 
-    fun execute(city: String): WeatherDomain {
+    suspend fun execute(city: String): WeatherDomain {
         return weatherRepository.getWeather(city = city)
     }
 
