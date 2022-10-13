@@ -34,4 +34,8 @@ class WeatherRepositoryImpl(private val weatherStorageRemote: WeatherStorageRemo
         return WeatherDomain(city = weather.city, degrees = weather.degrees, feelsLike = weather.feelsLike, weather = weather.weather)
     }
 
+    override suspend fun updateWeather(weather: WeatherDomain) {
+        weatherStorageDatabase.updateWeather(Weather(city = weather.city, degrees = weather.degrees, feelsLike = weather.feelsLike, weather = weather.weather, id = 0))
+    }
+
 }

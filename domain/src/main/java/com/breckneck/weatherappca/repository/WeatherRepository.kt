@@ -10,4 +10,6 @@ interface WeatherRepository {
     suspend fun saveWeather(weather: WeatherDomain)
 
     suspend fun getWeatherDatabase() : WeatherDomain
+
+    suspend fun updateWeather(weather: WeatherDomain)
 }

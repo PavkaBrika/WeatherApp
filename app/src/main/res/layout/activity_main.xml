@@ -34,59 +34,66 @@
             android:id="@+id/cityTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="city"
-            android:textSize="30sp"
             android:layout_margin="16dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="city"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/degreesTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DEGREES"
-            android:textSize="30sp"
-            android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="DEGREES"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/feelslikeTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="feels like"
-            android:textSize="30sp"
-            android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="feels like"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/weatherTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="weather"
-            android:textSize="30sp"
-            android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="weather"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/loadingTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
             android:text="@string/loading"
             android:textSize="30sp"
-            android:visibility="invisible"
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginBottom="16dp"
-            android:gravity="center"/>
-
-
-
+            android:visibility="invisible" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/refreshButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/refresh"
+        android:layout_margin="16dp"
+        android:layout_below="@id/cityInfoLayout"
+        android:visibility="invisible"/>
+
 
 </RelativeLayout>

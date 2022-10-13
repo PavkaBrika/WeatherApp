@@ -25,4 +25,10 @@ class DatabaseWeatherStorageImpl(context: Context) : WeatherStorageDatabase{
         return db.appDao().getWeather()
     }
 
+    override suspend fun updateWeather(weather: Weather) {
+        var weatherId = sharedPrefs.getInt(WEATHER_ID, 0)
+        weather.id =  weatherId
+        db.appDao().updateWeather(weather = weather)
+    }
+
 }

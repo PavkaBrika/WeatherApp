@@ -8,4 +8,6 @@ interface WeatherStorageDatabase {
     suspend fun saveWeather(weather: Weather)
 
     suspend fun getWeather() : Weather
+
+    suspend fun updateWeather(weather: Weather)
 }

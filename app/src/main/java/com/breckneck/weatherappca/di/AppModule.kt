@@ -1,8 +1,10 @@
 package com.breckneck.weatherappca.di
 
+import com.breckneck.weatherappca.presentation.viewmodel.MainViewModel
 import com.breckneck.weatherappca.remote.WeatherApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
@@ -26,6 +28,15 @@ val appModule = module {
             .build()
 
         return@single retrofit.create(WeatherApi::class.java)
+    }
+
+    viewModel<MainViewModel> {
+        MainViewModel(
+            getWeatherUseCase = get(),
+            getWeatherDataBaseUseCase = get(),
+            saveWeatherUseCase = get(),
+            updateWeatherUseCase = get()
+        )
     }
 
 }
